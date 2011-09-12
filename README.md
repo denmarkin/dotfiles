@@ -1,6 +1,6 @@
 # My dotfiles
 
-My personal config files.
+My personal config files. I don't add new files unless they are "clean" and proven to work.
 Some things were taken from http://github.com/henrik/dotfiles. Thanks Henrik!
 
 ## Install:
@@ -31,3 +31,7 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
     ./.osx
 
 Or simply look inside to find out what might be useful for you.
+
+## Vim
+
+MacVim + Janus (https://github.com/carlhuda/janus). .gvimrc.local included, but I don't use it as my main editor yet. Yes, I know it's cool. But I'm a TextMate guy still.
