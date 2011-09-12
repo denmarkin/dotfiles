@@ -1,0 +1,34 @@
+# For more options see example_dot_autotest.rb inside ZenTest gem
+
+require 'autotest/fsevent'
+require 'autotest/restart'
+require 'autotest/growl'
+
+Autotest.add_hook :initialize do |autotest|
+  %w{.git .svn .hg .DS_Store ._* vendor tmp log doc}.each do |exception|
+    autotest.add_exception(exception)
+  end
+#  autotest.add_mapping(/^spec\/integration\/.*_spec\.rb$/) do|filename, _|
+#    filename
+#  end
+#  autotest.add_mapping(/^spec\/(controllers|helpers|lib|models|views)\/.*_spec\.rb$/) do|filename, _|
+#      filename
+#  end
+end
+
+Autotest::Growl::show_modified_files = true
+Autotest::Growl::one_notification_per_run = true
+# Autotest::Growl::clear_terminal = false
+Autotest::Growl::hide_label = true
+
+# Override autotest default magic to rerun all tests every time a
+# change is detected on the file system.
+class Autotest
+  def get_to_green
+    begin
+      rerun_all_tests
+      wait_for_changes unless all_good
+    end until all_good
+  end
+end
+
