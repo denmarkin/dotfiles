@@ -23,3 +23,11 @@ If e.g. `~/.dotfiles/gitconfig` contains `<.replace github-token>` then
 So if you want to make changes to that file, make them in `~/dotfiles/gitconfig` and then run `rake install` again.
 
 Changes to symlinked files without `<.replace>` bits do not require a `rake install` on every change as they're symlinked.
+
+## OSX
+
+When setting up a new Mac, you may want to set some sensible OS X defaults:
+
+    ./.osx
+
+Or simply look inside to find out what might be useful for you.
