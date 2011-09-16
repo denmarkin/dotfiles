@@ -7,6 +7,7 @@
 # rake
 # rdoc
 # wirble
+# spork
 
 # https://github.com/carlhuda/bundler/issues/183#issuecomment-1149953
 if defined?(::Bundler)
