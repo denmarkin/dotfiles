@@ -31,3 +31,7 @@ export EDITOR=mate
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
 __rvm_project_rvmrc # https://rvm.beginrescueend.com/integration/zsh/
+
+# Usable aliases
+alias l='ls -lah'
+alias cleansvn='rm -rf `find . -type d -name .svn`'
