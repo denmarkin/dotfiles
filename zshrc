@@ -34,4 +34,4 @@ __rvm_project_rvmrc # https://rvm.beginrescueend.com/integration/zsh/
 
 # Usable aliases
 alias l='ls -lah'
-alias cleansvn='rm -rf `find . -type d -name .svn`'
+alias clear-svn='rm -rf `find . -type d -name .svn`'
