@@ -34,4 +34,4 @@ Or simply look inside to find out what might be useful for you.
 
 ## Vim
 
-MacVim + Janus (https://github.com/carlhuda/janus). .gvimrc.local included, but I don't use it as my main editor yet. Yes, I know it's cool. But I'm a TextMate guy still.
+MacVim + Janus (https://github.com/carlhuda/janus). .gvimrc.local included, but I don't use it as my main editor yet. Yes, I know it's cool. But I'm a TextMate/SublimeText guy still.

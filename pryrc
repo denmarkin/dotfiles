@@ -1,7 +1,7 @@
 # vim: ft=ruby
 
 # Editor
-Pry.config.editor = "mate"
+Pry.config.editor = "subl"
 
 # Load plugins (only those I whitelist)
 Pry.config.should_load_plugins = false

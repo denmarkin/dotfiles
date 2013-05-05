@@ -21,13 +21,13 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow github history-substring-search node npm pow osx ruby rvm rails rails3 ssh-agent textmate brew bundler cap gem)
+plugins=(git git-flow github history-substring-search node npm pow osx ruby rvm rails rails3 ssh-agent brew bundler cap gem)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/php5/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH
-export EDITOR=mate
+export EDITOR=subl
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
 __rvm_project_rvmrc # https://rvm.beginrescueend.com/integration/zsh/
@@ -35,3 +35,5 @@ __rvm_project_rvmrc # https://rvm.beginrescueend.com/integration/zsh/
 # Usable aliases
 alias l='ls -lah'
 alias clear-svn='rm -rf `find . -type d -name .svn`'
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

@@ -10,7 +10,7 @@
 [help]
 	autocorrect = 1
 [core]
-	editor = mate -w
+	editor = subl
 [alias]
 	st = status
 	ci = commit
