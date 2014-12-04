@@ -26,7 +26,7 @@ plugins=(git git-flow github history-substring-search node npm pow osx ruby rvm 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/php5/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH
+export PATH=/usr/local/php5/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/usr/local/mysql/bin:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools:/Development/adt-bundle/sdk/build-tools:$PATH
 export EDITOR=subl
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
@@ -37,3 +37,11 @@ alias l='ls -lah'
 alias clear-svn='rm -rf `find . -type d -name .svn`'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# Boot2docker
+export DOCKER_HOST="tcp://$(boot2docker ip 2>/dev/null):2376"
+export DOCKER_CERT_PATH=/Users/den/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
