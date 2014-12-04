@@ -1,6 +1,6 @@
 [user]
 	name = Den Markin
-	email = denmarkin@gmail.com
+	email = den@rev.com
 [color]
 	branch = auto
 	diff = auto
@@ -10,12 +10,28 @@
 [help]
 	autocorrect = 1
 [core]
-	editor = subl
+	editor = "subl -w"
 [alias]
-	st = status
+	st = "status -sb"
 	ci = commit
 	co = checkout
+	pl = "pull --rebase" # proper way to pull stuff without useless merge commits
 	br = branch
+	# different log output
+	lg = "log --graph --pretty=format:'%C(green)%h [%an]%Creset -%C(cyan)%d%Creset %s %C(green)(%cr)%Creset' --abbrev-commit --date=relative"
+	hist = "log --pretty=format:'%h %ad | %s%d [%an]' --date=short --max-count=7"
+	my = "log --pretty=format:'%h %ad | %s%d' --date=short --author='Den Markin'"
+	lg1 = "git log --oneline --decorate"
+	patch = "apply --ignore-space-change --ignore-whitespace"
+	forget = "revert --no-commit"
+[branch]
+	autosetuprebase = always
+[push]
+	default = tracking
 [github]
 	user = denmarkin
-	token = <your token here>
+	token = f3209ffdacefc3f5a01b5ef5b67da9d8c421f585
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
