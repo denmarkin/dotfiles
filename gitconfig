@@ -11,6 +11,7 @@
 	autocorrect = 1
 [core]
 	editor = "subl -w"
+	excludesfile = /Users/den/.gitignore_global
 [alias]
 	st = "status -sb"
 	ci = commit
@@ -27,7 +28,7 @@
 [branch]
 	autosetuprebase = always
 [push]
-	default = tracking
+	default = simple
 [github]
 	user = denmarkin
 	token = f3209ffdacefc3f5a01b5ef5b67da9d8c421f585
@@ -35,3 +36,15 @@
 	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[rebase]
+	autostash = true
